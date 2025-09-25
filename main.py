@@ -17,7 +17,7 @@ data_dir = os.path.join(data_dir, "pages")
 file_main = os.makedirs(data_dir, exist_ok=True)
 file_main = data_dir
 
-onlyfiles = [f for f in listdir(file_main) if isfile(join(file_main, f))]
+onlyfiles = [f for f in os.listdir(file_main) if os.path.isfile(os.path.join(file_main, f))]
 
 pygame.init()
 
@@ -185,7 +185,7 @@ async def main():
     clock = pygame.time.Clock()
     base_minus = 0
     updating = font2.render("Updating ...",True,(0,0,0))
-    notworking = font3.render("SOM currently down ! Showing previous data",True,(0,0,0))
+    notworking = font3.render("SOM currently down ! Fetching previous data ...",True,(0,0,0))
     offline = font3.render("No Internet Connection",True,(0,0,0))
     
     rety = pygame.Rect(950,20,130,40)
@@ -199,8 +199,8 @@ async def main():
         screen.blit(tryt,(983,30))
         if not DONE and working:
             screen.blit(updating, (480,100-base_minus))
-        if not working and online:
-            screen.blit(notworking, (360,100-base_minus))
+        if not working and online and not DONE:
+            screen.blit(notworking, (350,100-base_minus))
         if not online:
             screen.blit(offline, (430,100-base_minus))
         k = 0
