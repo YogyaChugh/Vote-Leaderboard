@@ -314,6 +314,7 @@ async def main():
         events = pygame.event.get()
         mousepos = pygame.mouse.get_pos()
         inone = False
+        baby = False
         if rety.collidepoint(mousepos) and REFETCH_ALLOW and prev_users!=[]:
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
             inone = True
@@ -322,7 +323,7 @@ async def main():
                 pygame.draw.line(screen,(0,0,0),(rectsdude[p][0],rectsdude[p][1]+32),(rectsdude[p][0]+rectsdude[p][2],rectsdude[p][1]+32),3)
                 pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
                 inone = True
-                update_screen()
+                baby = True
         if leftrect.collidepoint(mousepos):
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_HAND)
             inone = True
@@ -337,6 +338,9 @@ async def main():
             inone = True
         if not inone:
             pygame.mouse.set_cursor(pygame.SYSTEM_CURSOR_ARROW)
+            if baby:
+                baby = False
+                update_screen()
         for event in events:
             if event.type==pygame.QUIT:
                 screen.blit(bg,(0,0))

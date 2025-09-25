@@ -1,4 +1,4 @@
 requests
 pygame
 appdirs
-pathlib
+pyinstaller
