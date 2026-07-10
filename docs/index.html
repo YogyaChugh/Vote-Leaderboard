@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Leaderboard | Summer of Making</title>
+    <meta name="description" content="A real-time leaderboard made with PyGame for the Summer of Making.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Decorative background elements -->
+    <div class="sun-shape"></div>
+    <div class="blob-shape pink"></div>
+    <div class="blob-shape yellow"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🏆</div>
+                <span class="logo-text">VoteLeader</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#screenshots">Screenshots</a>
+            </div>
+            <a href="https://github.com/YogyaChugh/Vote-Leaderboard" target="_blank" class="btn btn-github">
+                <i data-lucide="github"></i> Repository
+            </a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="tag">Summer of Making ☀️</div>
+                <h1 class="title">Track your <span class="text-gradient">progress</span> in real-time.</h1>
+                <p class="subtitle">A custom leaderboard built in PyGame that elegantly displays users and their vote counts, helping you see exactly how close you are to your ship certification.</p>
+                <div class="action-group">
+                    <a href="#screenshots" class="btn btn-primary">See it in action</a>
+                    <a href="https://summer.hackclub.com/api/v1/users" target="_blank" class="api-link">
+                        <i data-lucide="database"></i> Powered by Hack Club API
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="image-wrapper main-img">
+                    <img src="https://github.com/user-attachments/assets/b471ae90-8afb-4b15-b15c-ab034b855edc" alt="Leaderboard Preview">
+                    <div class="floating-badge badge-1">🚀 Ship Faster</div>
+                    <div class="floating-badge badge-2">💯 Live Votes</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="screenshots" class="screenshots-section">
+        <div class="section-container">
+            <h2 class="section-title">Beautifully crafted in PyGame</h2>
+            <p class="section-subtitle">Simple, elegant, and directly connected to the Summer API.</p>
+            
+            <div class="gallery">
+                <div class="gallery-item tilt-card">
+                    <img src="https://github.com/user-attachments/assets/2c17ade1-f3cf-41d7-88fe-4fca1a671366" alt="Leaderboard Screenshot 1">
+                </div>
+                <div class="gallery-item tilt-card">
+                    <img src="https://github.com/user-attachments/assets/b471ae90-8afb-4b15-b15c-ab034b855edc" alt="Leaderboard Screenshot 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 Yogya Chugh. Built for the Summer of Making.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
